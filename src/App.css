@@ -1,26 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('/fonts/digital-7.ttf');
+
+@font-face {
+  font-family: "digital";
+  src: url("/fonts/digital-7.ttf");
+  }
+
 html,body,#root,.App{
   width: 100vw;
   height: 100vh;
 }
 
-
 .calc {
   width: 200px;
   height: 270px;
-  background-color: #444;
+  background-color:  #4444444f;
   /* padding-top: 10px; */
   position: absolute;
   margin-top: calc( 50vh - 135px);
   margin-left: calc( 50vw - 100px);
+  box-shadow: 1px 1px 12px 0 #656565;
 }
 
 .screen {
-  width: 80%;
-  height: 25px;
+  width: calc( 80% - 16px);
+  height: 18px;
   background-color:black;
+  background-color:#cae2bd;
   margin: 20px auto;
-  color: white;
+  color: black;
   text-align: right;
+  font-family: 'digital', 'Black Ops One';
+  padding: 3px 8px;
+  font-size: 25px;
 }
 
 .pad {
@@ -32,6 +45,10 @@ html,body,#root,.App{
   width: 40px;
   height: 40px;
   font-size: 22px;
+  box-shadow: inset 0 0 20px 0px #cecece82;
+}
+.pad button:hover {
+  box-shadow: inset 0 0 20px 0px #FFF;
 }
 
 .pad button.egale {
