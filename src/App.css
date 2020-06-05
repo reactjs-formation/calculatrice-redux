@@ -34,6 +34,7 @@ html,body,#root,.App{
   font-family: 'digital', 'Black Ops One';
   padding: 3px 8px;
   font-size: 25px;
+  border: 1px inset;
 }
 
 .pad {
@@ -46,6 +47,7 @@ html,body,#root,.App{
   height: 40px;
   font-size: 22px;
   box-shadow: inset 0 0 20px 0px #cecece82;
+  border: 2px outset;
 }
 .pad button:hover {
   box-shadow: inset 0 0 20px 0px #FFF;
