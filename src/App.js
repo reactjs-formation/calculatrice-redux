@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as types from './redux/types/calculatrice';
+import {mapDispatchToProps} from './redux/actions/calculatrice'
 
 import Draggable from 'react-draggable';
 
@@ -8,15 +9,7 @@ import './App.css';
 
 const mapStateToProps = state => ({state: state})
 
-const mapDispatchToProps = dispatch => ({ 
-  dispatch: arg => dispatch(arg) ,
-  screen: number => dispatch({type: types.SCREEN, number:number}),
-  addOp: () => dispatch({type: types.ADD}),
-  subOp: () => dispatch({type: types.SUB}),
-  divOp: () => dispatch({type: types.DIV}),
-  mulOp: () => dispatch({type: types.MUL}),
-  equOp: () => dispatch({type: types.EQU}),
-});
+
 
 function App(props) {
 
@@ -48,7 +41,7 @@ function App(props) {
                 <i className="fas fa-divide"></i>
               </button>
               <button onClick={() => props.screen(0)}>0</button>
-              <button onClick={() => props.dispatch({type: types.RESET})}>C</button>
+              <button onClick={props.reset}>C</button>
               <button onClick={props.equOp}>=</button>
               <button onClick={props.mulOp}>
                 <i className="fas fa-times"></i>
